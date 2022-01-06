@@ -46,7 +46,7 @@ public class PracticeMain {
 	 */
 	public static void checkSubArrayWithZeroSum(int []a) {
 		int sum =0;
-		List<String> subarry = new ArrayList<>();
+		List<String> subarry = new ArrayList();
 		for (int i=0;i<a.length;i++) {
 			sum = 0;
 			sum = a[i];

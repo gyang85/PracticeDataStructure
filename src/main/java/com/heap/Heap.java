@@ -26,7 +26,7 @@ public class Heap {
 	Vector<Integer> list;
 	
 	public Heap() {
-		list = new Vector<>();
+		list = new Vector();
 	}
 	public void addItem(int data) {
 		list.add(data);

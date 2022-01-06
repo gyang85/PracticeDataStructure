@@ -62,8 +62,8 @@ public class ExpressionEvalutor {
 	}
 	public static void main(String args[]) {
 		String expression = "2+4*(3/2+2)";
-		Stack<Integer> operands = new Stack<>();
-		Stack<Character> operators = new Stack<>();
+		Stack<Integer> operands = new Stack();
+		Stack<Character> operators = new Stack();
 		char[] charArray = expression.toCharArray();
 		for (int i=0; i<charArray.length; i++) {
 			if (isOperator(charArray[i])) {
