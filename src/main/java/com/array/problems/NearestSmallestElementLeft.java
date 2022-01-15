@@ -12,7 +12,7 @@ import java.util.Stack;
  * @author nxf43614
  *
  */
-public class NearestSmallestElement {
+public class NearestSmallestElementLeft {
 
 	/**
 	 * 
@@ -51,7 +51,7 @@ public class NearestSmallestElement {
 	public static void main(String args[]) {
 		int arr[] = { 4, 14, 1, 5, 9, 12, 45 };
 		System.out.println("Original array => " + Arrays.toString(arr));
-		NearestSmallestElement smallElement = new NearestSmallestElement();
+		NearestSmallestElementLeft smallElement = new NearestSmallestElementLeft();
 		System.out.println("Nearest smaller element in the array =>"
 				+ Arrays.toString(smallElement.findNearestSmallerElement(arr)));
 	}
