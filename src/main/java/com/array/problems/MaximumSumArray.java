@@ -28,7 +28,7 @@ public class MaximumSumArray {
 	}
 	
 	public static void main (String args[]) {
-		int elements[]= {-2,2,-1,7,3};
+		int elements[]= {-2, -3, 4, -1, -2, 1, 5, -3};
 		int sum = maxSubArray(elements);
 		System.out.println("Maximum sum = "+sum);
 	}
