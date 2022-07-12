@@ -90,6 +90,8 @@ public class Heap {
 	
 	public void remove() {
 		// remove will always delete element from top
+		// set last element to first position and remove last element. Now last element is available in first position so
+		// to maintain heap property we need to heapify down so compare all the child and swap the element until reached to proper position
 		list.setElementAt(list.get(list.size()-1), 0);
 		list.remove(list.size()-1);
 		heapifyDown(0);
