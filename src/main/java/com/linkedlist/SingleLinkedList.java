@@ -33,6 +33,26 @@ public class SingleLinkedList {
 		return existingItems;
 	}
 	
+	/**
+	 * Reverse singly linked list
+	 * @param head
+	 * @return
+	 */
+	public Node reverse(Node head) {
+		Node previous = head;
+		Node current = head;
+		Node nextNode = current.nextNode;
+		head.nextNode = null;
+		while (nextNode != null) {
+			current = nextNode;
+			nextNode = nextNode.nextNode;
+			current.nextNode = previous;
+			previous = current;
+		}
+		Node lastNode = current;
+		return lastNode;
+	}
+	
 	public static void main(String args[]) {
 		SingleLinkedList singleLinkedList = new SingleLinkedList();
 		Node node = null;
@@ -42,5 +62,9 @@ public class SingleLinkedList {
 		node = singleLinkedList.addItem(node, 4);
 		node = singleLinkedList.addItem(node, 5);
 		singleLinkedList.listNode(node);
+		Node reversed = singleLinkedList.reverse(node);
+		System.out.println("after reversal");
+		singleLinkedList.listNode(reversed);
+		
 	}
 }
