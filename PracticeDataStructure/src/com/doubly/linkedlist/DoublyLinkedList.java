@@ -91,4 +91,5 @@ public class DoublyLinkedList {
 	    list.displayList(node);
 	    
 	}
+	
 }
