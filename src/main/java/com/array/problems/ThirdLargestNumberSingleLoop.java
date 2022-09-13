@@ -8,28 +8,30 @@ public class ThirdLargestNumberSingleLoop {
 	 * @return
 	 */
 	private static int findThirdLargest(int[] array) {
-        //3
-        int first, second, third;
-        //4
-        first = second = third = array[0];
-        //5
-        for (int i = 1; i < array.length; i++) {
-            //6
-            if (array[i] > first) {
-                third = second;
-                second = first;
-                first = array[i];
-            } else if (array[i] > second) {
-                //7
-                third = second;
-                second = array[i];
-            } else if (array[i] > third) {
-                //8
-                third = array[i];
+		// First initialize with minimum integer value 
+        int firstLargest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        int thirdLargest = Integer.MIN_VALUE;
+        for (int i = 0; i < array.length; i++) {
+        	// check if array element is greater then first largest then move first largest value to second largest and second largest to third
+        	// largest
+            if (array[i] > firstLargest) {
+            	thirdLargest = secondLargest;
+                secondLargest = firstLargest;
+                firstLargest = array[i];
+            } else if (array[i] > secondLargest) {
+                //In this condition we will check if array element is not greater than with first largest but it is larger than second
+            	// then assign second largest to third largest and assign second largest value with array element
+                thirdLargest = secondLargest;
+                secondLargest = array[i];
+            } else if (array[i] > thirdLargest) {
+            	//In this condition we will check if array element is not greater than with first & second largest but it is larger than third
+            	// then assign third largest value with array element
+                thirdLargest = array[i];
             }
         }
         //9
-        return third;
+        return thirdLargest;
     }
 	
 	public static void main(String[] args) {
